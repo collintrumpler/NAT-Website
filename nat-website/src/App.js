@@ -1,4 +1,5 @@
 import "./App.css";
+import Form from "./Email";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         />
         <Services />
         <Gallery />
+        <Form />
       </main>
     </>
   );
@@ -139,5 +141,23 @@ function Gallery() {
 function GalleryImage({ path, name }) {
   return <img src={path} alt={name}></img>;
 }
+
+// function Contact() {
+//   const {state, submit} = useForm({
+//     id:
+//   })
+//   return (
+//     <form action="" onSubmit={onSubmit}>
+//       <label htmlFor="name">Name</label>
+//       <input type="text" id="name" name="name" />
+//       <label htmlFor="email">Email</label>
+//       <input type="text" id="first-name" name="first-name" />
+//       <label htmlFor="phone-number">Phone #</label>
+//       <input type="text" id="phone-number" name="phone-number" />
+//       <input type="text" id="message" name="message" />
+//       <button type="submit">Send</button>
+//     </form>
+//   );
+// }
 
 export default App;
