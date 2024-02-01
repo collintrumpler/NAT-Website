@@ -64,6 +64,7 @@ export default function Form() {
       <div className="contact-message">
         <label htmlFor="message"></label>
         <textarea
+          maxLength={"500"}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           id="message"
