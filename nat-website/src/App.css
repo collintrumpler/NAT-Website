@@ -1,0 +1,323 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  background-color: var(--main-color);
+  --main-color: #f7f7f7;
+  --header-text: #55be66;
+  --highlight-color: #ffffff;
+  --hero-bg: #212121b2;
+}
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 3rem;
+}
+
+.nav-title-container {
+  text-align: center;
+  color: var(--header-text);
+}
+
+.nav-title-container > h1 {
+  font-size: 2rem;
+  line-height: 1.8rem;
+  font-weight: 900;
+}
+
+.nav-title-container > h2 {
+  font-size: 0.325rem;
+  letter-spacing: 0.03rem;
+  font-weight: 700;
+}
+
+.nav-btn {
+  font-weight: 500;
+  margin: 0 1rem;
+  background: none;
+  border: none;
+}
+
+/* NAV */
+/* MAIN */
+main {
+  display: grid;
+  grid-template: 1fr 0.6fr 1.2fr 1fr 1fr / 1fr 1fr;
+  grid-template-areas:
+    "hero hero"
+    "about about"
+    "service service"
+    "gallery gallery"
+    "contact contact";
+}
+/* MAIN */
+/* HERO */
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--hero-bg);
+  grid-area: hero;
+  color: var(--main-color);
+  width: 100%;
+  height: 75vh;
+}
+
+.hero-content {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 70%;
+  width: 60%;
+  text-align: center;
+}
+
+.hero-content > h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero-content > p {
+  line-height: 2;
+  font-weight: 300;
+}
+
+.hero-content > button {
+  background-color: var(--header-text);
+  color: var(--main-color);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  border-radius: 0;
+  border: 0;
+}
+
+.hero-bg {
+  grid-area: hero;
+  background-size: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 3rem;
+  width: 100vw;
+  height: 75%;
+}
+
+/* HERO */
+/* ABOUT */
+.about-container {
+  display: flex;
+  margin: -5vh auto;
+  grid-area: about;
+  background-color: var(--highlight-color);
+  width: 65%;
+  height: 50vh;
+}
+
+.about-container > img {
+  height: 100%;
+  aspect-ratio: 4 / 4;
+  object-fit: cover;
+}
+
+.about-content {
+  margin: auto;
+  width: 50%;
+}
+
+.about-content > h2 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 2rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.about-content > p {
+  line-height: 1.4rem;
+  font-size: 0.8rem;
+}
+
+.background-design {
+  margin: 0 auto;
+  z-index: -1;
+  grid-area: about;
+  width: 90%;
+  opacity: 0.5;
+}
+
+/* ABOUT */
+/* SERVICES */
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: service;
+  margin: auto;
+  width: 60%;
+  height: 50%;
+}
+
+.service {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+}
+
+.service > img {
+  width: 4rem;
+  opacity: 40%;
+}
+.service > h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  margin-left: 5%;
+}
+/* SERVICES */
+/* GALLERY */
+.gallery-container {
+  grid-area: gallery;
+  display: grid;
+  gap: 2%;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 80%;
+  width: 90%;
+  margin: auto;
+}
+.gallery-container > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* GALLERY */
