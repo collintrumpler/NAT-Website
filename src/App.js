@@ -1,3 +1,4 @@
+import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import "./App.css";
 import Form from "./Email";
 
@@ -13,7 +14,8 @@ function App() {
         />
         <Services />
         <Gallery />
-        <Form />
+        <ContactForm />
+        <Footer />
       </main>
     </>
   );
@@ -128,6 +130,7 @@ function Service({ path, name }) {
 function Gallery() {
   return (
     <div id="location-gallery" className="gallery-container">
+      <h3 className=" gallery-title">SOME OF OUR WORK</h3>
       <GalleryImage
         path={`${process.env.PUBLIC_URL}/assets/images/image2.jpg`}
         name="Painted Door"
@@ -140,12 +143,51 @@ function Gallery() {
         path={`${process.env.PUBLIC_URL}/assets/images/image4.jpg`}
         name="Exterior"
       />
+      <a
+        className="gallery-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.facebook.com/profile.php?id=100063698036781&sk=photos"
+      >
+        <button>SEE MORE</button>
+      </a>
     </div>
   );
 }
 
 function GalleryImage({ path, name }) {
   return <img src={path} alt={name}></img>;
+}
+
+function ContactForm() {
+  return (
+    <div className="form-container">
+      <h2>REACH OUT</h2>
+      <Form />
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <div className="sm-links">
+        <Social
+          name="Facebook"
+          path={`${process.env.PUBLIC_URL}/assets/images/facebook-logo.png`}
+          link="https://www.facebook.com/profile.php?id=100063698036781"
+        />
+      </div>
+    </footer>
+  );
+}
+
+function Social({ link, path, name }) {
+  return (
+    <a href={link}>
+      <img className="social-media-link" src={path} alt={name}></img>
+    </a>
+  );
 }
 
 export default App;
