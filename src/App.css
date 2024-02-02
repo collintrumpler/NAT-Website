@@ -307,6 +307,7 @@ main {
 
 .service {
   display: flex;
+  flex-direction: column;
   padding: 2rem;
   align-items: center;
 }
@@ -314,6 +315,7 @@ main {
 .service > img {
   width: 4rem;
   opacity: 40%;
+  padding-bottom: 2rem;
 }
 .service > h3 {
   font-family: "Poppins", sans-serif;
