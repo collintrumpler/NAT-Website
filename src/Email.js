@@ -17,7 +17,7 @@ export default function Form() {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, message }),
+      body: JSON.stringify({ name, email, message, error }),
     })
       .then((response) => response.json())
       .then((response) => {
