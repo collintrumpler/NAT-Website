@@ -29,9 +29,9 @@ function Header() {
         <h2>PROPERTY SERVICES</h2>
       </div>
       <div className="nav-btn-container">
-        <NavButton dest="#location-about" name="About" />
-        <NavButton dest="#location-services" name="Services" />
-        <NavButton dest="#location-contact" name="Contact" />
+        <NavButton dest="#about" name="About" />
+        <NavButton dest="#services" name="Services" />
+        <NavButton dest="#contact" name="Contact" />
       </div>
     </header>
   );
@@ -71,7 +71,7 @@ function Hero({ path }) {
 function About({ path, alt }) {
   return (
     <>
-      <section id="location-about" className="about-container">
+      <section id="about" className="about-container">
         <img src={path} alt={alt}></img>
         <div className="about-content">
           <h2>WHAT WE DO</h2>
@@ -97,7 +97,7 @@ function About({ path, alt }) {
 
 function Services() {
   return (
-    <section id="location-services" className="services-container">
+    <section id="services" className="services-container">
       <Service
         path={`${process.env.PUBLIC_URL}/assets/images/paint-roller.png`}
         name="Painting & Exterior"
@@ -129,7 +129,7 @@ function Service({ path, name }) {
 
 function Gallery() {
   return (
-    <div id="location-gallery" className="gallery-container">
+    <div id="gallery" className="gallery-container">
       <h3 className=" gallery-title">SOME OF OUR WORK</h3>
       <GalleryImage
         path={`${process.env.PUBLIC_URL}/assets/images/image2.jpg`}
