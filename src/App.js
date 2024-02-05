@@ -1,4 +1,3 @@
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import "./App.css";
 import Form from "./Email";
 
