@@ -55,7 +55,7 @@ function Hero({ path }) {
           dedication to your satisfaction, creating a lasting impact on your
           property.
         </p>
-        <a href="#location-gallery">
+        <a href="#gallery">
           <button>VIEW OUR WORK</button>
         </a>
       </div>
@@ -160,7 +160,7 @@ function GalleryImage({ path, name }) {
 
 function ContactForm() {
   return (
-    <div className="form-container">
+    <div id="contact" className="form-container">
       <h2>REACH OUT</h2>
       <Form />
     </div>

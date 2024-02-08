@@ -187,7 +187,7 @@ button {
 /* MAIN */
 main {
   display: grid;
-  grid-template: 75vh 50vh 80vh 1fr 100vh 20vh/ 1fr 1fr;
+  grid-template: 75vh 50vh 90vh 1fr 100vh 20vh/ 1fr 1fr;
   grid-template-areas:
     "hero hero"
     "about about"
@@ -305,7 +305,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-area: service;
-  margin: auto;
+  margin: 5vh auto auto auto;
   width: 70%;
   height: 100%;
 }
@@ -326,7 +326,7 @@ main {
 .service > h3 {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
-  margin-left: 5%;
+  /* margin-left: 5%; */
 }
 /* SERVICES */
 /* GALLERY */
@@ -334,7 +334,7 @@ main {
 .gallery-title {
   grid-area: title;
   font-size: 0.8rem;
-  margin: auto;
+  margin: 2vh auto auto auto;
   font-weight: 700;
   letter-spacing: 0.8rem;
 }
