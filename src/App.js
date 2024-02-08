@@ -14,8 +14,8 @@ function App() {
         <Services />
         <Gallery />
         <ContactForm />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }
@@ -51,7 +51,7 @@ function Hero({ path }) {
         <h2>Maine-based Property Services</h2>
         <p>
           At NAT's, though small, our commitment to quality is paramount. With
-          meticulous attention to detail, we ensure each service reflects our
+          meticulous attention to detail we ensure each service reflects our
           dedication to your satisfaction, creating a lasting impact on your
           property.
         </p>
@@ -170,13 +170,20 @@ function ContactForm() {
 function Footer() {
   return (
     <footer>
-      <div className="sm-links">
-        <Social
-          name="Facebook"
-          path={`${process.env.PUBLIC_URL}/assets/images/facebook-logo.png`}
-          link="https://www.facebook.com/profile.php?id=100063698036781"
-        />
-      </div>
+      <section>
+        <div className="footer-info">
+          <h3>Contact Info:</h3>
+          <h4>trumplernick@yahoo.com</h4>
+          <h4>(207)-756-3211</h4>
+        </div>
+        <div className="sm-links">
+          <Social
+            name="Facebook"
+            path={`${process.env.PUBLIC_URL}/assets/images/facebook-logo.png`}
+            link="https://www.facebook.com/profile.php?id=100063698036781"
+          />
+        </div>
+      </section>
     </footer>
   );
 }

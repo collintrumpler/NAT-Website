@@ -50,7 +50,7 @@ export default function Form() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           id="name"
-          placeholder="Your first and last name"
+          placeholder="John Doe"
         />
       </div>
 

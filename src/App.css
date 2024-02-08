@@ -137,7 +137,7 @@ button {
   --header-text: #55be66;
   --highlight-color: #ffffff;
   --hero-bg: #212121b2;
-  --footer-bg: #0c0c0cb2;
+  --footer-bg: #080808b2;
 }
 /* NAV */
 .nav {
@@ -187,14 +187,13 @@ button {
 /* MAIN */
 main {
   display: grid;
-  grid-template: 75vh 50vh 90vh 1fr 100vh 20vh/ 1fr 1fr;
+  grid-template: 75vh 50vh 90vh 1fr 100vh/ 1fr 1fr;
   grid-template-areas:
     "hero hero"
     "about about"
     "service service"
     "gallery gallery"
-    "contact contact"
-    "footer footer";
+    "contact contact";
 }
 /* MAIN */
 /* HERO */
@@ -263,7 +262,7 @@ main {
   margin: 0 auto;
   grid-area: about;
   background-color: var(--highlight-color);
-  width: 65%;
+  width: 65vw;
   height: 50vh;
 }
 
@@ -281,14 +280,14 @@ main {
 .about-content > h2 {
   font-family: "Poppins", sans-serif;
   margin-bottom: 2rem;
-  font-size: 0.7rem;
+  font-size: 1vw;
   font-weight: 700;
   letter-spacing: 0.2rem;
 }
 
 .about-content > p {
   line-height: 1.4rem;
-  font-size: 0.8rem;
+  font-size: 1vw;
 }
 
 .background-design {
@@ -326,7 +325,6 @@ main {
 .service > h3 {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
-  /* margin-left: 5%; */
 }
 /* SERVICES */
 /* GALLERY */
@@ -479,13 +477,32 @@ main {
 /* FOOTER */
 
 footer {
+  background-color: var(--footer-bg);
+  width: 100vw;
+  padding: 1vw 0;
+  margin-top: auto;
+}
+
+footer > section {
   display: flex;
   flex-direction: column;
-  grid-area: footer;
-  background-color: var(--footer-bg);
-  width: 100%;
-  height: 100%;
+  width: 40%;
+  height: 20vh;
+  margin: 0 auto;
 }
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--highlight-color);
+  text-align: center;
+  font-size: 0.8vw;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  height: 80%;
+}
+
 .sm-links {
   margin: auto;
 }
@@ -494,3 +511,231 @@ footer {
   filter: invert();
 }
 /* FOOTER */
+
+@media (orientation: portrait) {
+  @media (max-width: 961px) {
+    main {
+      display: grid;
+      grid-template: 55vh 50vh 70vh 1fr 100vh/ 1fr 1fr;
+      grid-template-areas:
+        "hero hero"
+        "about about"
+        "service service"
+        "gallery gallery"
+        "contact contact";
+    }
+
+    .nav-btn-container {
+      display: none;
+    }
+
+    .hero-bg {
+      grid-area: hero;
+      background-size: 150% 100%;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      z-index: -1;
+      position: absolute;
+      top: 3rem;
+      object-fit: fill;
+    }
+
+    .hero-container {
+      height: 100%;
+    }
+    .hero-content {
+      width: 80%;
+    }
+
+    .hero-content > h2 {
+      font-size: 6vw;
+    }
+
+    .hero-content p {
+      font-size: 2.8vw;
+      font-weight: 500;
+    }
+
+    .hero-content > a > button {
+      padding: 0.4rem 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+    }
+
+    .about-container > img {
+      display: none;
+    }
+    .background-design {
+      display: none;
+    }
+    .about-container {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    .about-content {
+      width: 70%;
+    }
+    .about-content > h2 {
+      font-size: 2.5vw;
+    }
+
+    .about-content > p {
+      font-size: 3vw;
+      line-height: 1rem;
+    }
+
+    .service > img {
+      width: 3rem;
+      padding-bottom: 2rem;
+    }
+    .service > h3 {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-size: 0.5rem;
+    }
+
+    .gallery-title {
+      grid-area: title;
+      font-size: 0.5rem;
+      margin: auto;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+    }
+
+    .gallery-container {
+      grid-area: gallery;
+      display: grid;
+      align-items: center;
+      grid-template: 0.2fr 1fr 1fr 1fr 0.2fr/ 1fr;
+      grid-template-areas:
+        "title"
+        "img"
+        "img"
+        "img"
+        "btn";
+      height: 80%;
+      width: 95%;
+      margin: auto;
+      gap: 2%;
+    }
+    .gallery-container > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.1s;
+      filter: brightness(0.7);
+    }
+    .form-container {
+      grid-area: contact;
+      margin: auto;
+      height: 70%;
+      width: 80%;
+    }
+
+    .form-container > h2 {
+      text-align: center;
+      margin-bottom: 5vh;
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+    }
+
+    .contact-email > label,
+    .contact-name > label {
+      font-size: 0.6rem;
+      text-align: center;
+    }
+
+    .submit-button {
+      margin: auto;
+    }
+
+    .footer-info {
+      text-align: center;
+      font-size: 0.5rem;
+      font-weight: 300;
+      font-family: "Poppins", sans-serif;
+      height: 80%;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  @media (max-height: 576px) {
+    .hero-content > h2 {
+      font-size: 6vh;
+    }
+
+    .hero-content p {
+      font-size: 2.8vh;
+      font-weight: 500;
+    }
+
+    .hero-content > a > button {
+      padding: 0.4rem 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+    }
+    .about-container > img {
+      display: none;
+    }
+    .background-design {
+      display: none;
+    }
+    .about-container {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    .about-content {
+      width: 70%;
+    }
+    .about-content > h2 {
+      font-size: 2.5vh;
+    }
+
+    .about-content > p {
+      font-size: 3vh;
+      line-height: 1rem;
+    }
+    .service > img {
+      width: 3rem;
+      padding-bottom: 2rem;
+    }
+    .service > h3 {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-size: 0.5rem;
+    }
+    .gallery-title {
+      grid-area: title;
+      font-size: 0.5rem;
+      margin: auto;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+    }
+    .form-container > h2 {
+      text-align: center;
+      margin-bottom: 5vh;
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+    }
+
+    footer {
+      margin-top: 100%;
+    }
+
+    footer > section {
+      height: 20vw;
+      margin: 0 auto;
+    }
+    .footer-info {
+      font-size: 2vw;
+      font-weight: 300;
+      font-family: "Poppins", sans-serif;
+      height: 100%;
+    }
+  }
+}
