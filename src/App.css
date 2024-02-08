@@ -537,6 +537,7 @@ footer > section {
       z-index: -1;
       position: absolute;
       top: 3rem;
+      height: 30rem;
       object-fit: fill;
     }
 
